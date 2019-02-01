@@ -9,95 +9,97 @@
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
-	<div id="container">
-	
-		<!--Хедер -->
-		<div id="header">
-			<!--Лого и номер телефона -->
-			<div>
-				<img src="image/logo.png">
-				<img src="image/phone.png" id="phone">
-			</div>
-			<!--Менюшка -->
-			<div>
-				<nav class="nav">
-				  <a class="nav-link ref-line" href="#">Кредитные карты</a>
-				  <a class="nav-link active ref-line" href="#">Вклады</a>
-				  <a class="nav-link ref-line" href="#">Дебетовая карта</a>
-				  <a class="nav-link ref-line" href="#">Страхование</a>
-				  <a class="nav-link ref-line" href="#">Друзья</a>
-				  <a class="nav-link" href="#">Интернет-банк</a>
-				</nav>
-			</div>
-		</div>
+	<div id="center-container">
+		<div id="container">
 		
-		<!--Хлебные крошки -->
-		<div id="path">
-			<a href="#">Главная</a> - <a href="#">Вклады</a> - Калькулятор
-		</div>
-		
-		<!--Собственно сам калькулятор -->
-		<div id="content">
-			<p id="contentName">Калькулятор</p>
-			<div>
+			<!--Хедер -->
+			<div id="header">
+				<!--Лого и номер телефона -->
 				<div>
-					<input class="fields" type="date" id="calendar">
-					<p>Дата оформления вклада</p>
+					<img src="image/logo.png">
+					<img src="image/phone.png" id="phone">
 				</div>
-				
-				<div class = "range">
-					<input type="range" value="999000" max="2999000" id="range1" onchange="change_input('deposit', 'range1')"/>
-					<br>
-					<p class="rangeP">3 000 000</p>
-					<p class="rangeP" style = "float:left; margin-left:9pt">1 тыс. руб.</p>
-				</div>
-				
+				<!--Менюшка -->
 				<div>
-					<input class="fields" type="number" name="deposit" value="1000000" min = "1000" max="3000000" onchange="change_slider('deposit', 'range1')">
-					<p>Сумма вклада</p>
+					<nav class="nav">
+					  <a class="nav-link ref-line" href="#">Кредитные карты</a>
+					  <a class="nav-link active ref-line" href="#">Вклады</a>
+					  <a class="nav-link ref-line" href="#">Дебетовая карта</a>
+					  <a class="nav-link ref-line" href="#">Страхование</a>
+					  <a class="nav-link ref-line" href="#">Друзья</a>
+					  <a class="nav-link" href="#">Интернет-банк</a>
+					</nav>
 				</div>
-				
+			</div>
+			
+			<!--Хлебные крошки -->
+			<div id="path">
+				<a href="#">Главная</a> - <a href="#">Вклады</a> - Калькулятор
+			</div>
+			
+			<!--Собственно сам калькулятор -->
+			<div id="content">
+				<p id="contentName">Калькулятор</p>
 				<div>
-					<select class="fields" name="year">
-						<option value = 1>1 год</option>
-						<option value = 2>2 года</option>
-						<option value = 3>3 года</option>
-						<option value = 4>4 года</option>
-						<option value = 5>5 лет</option>
-					</select>
-					<p>Срок вклада</p>
+					<div>
+						<input class="fields" type="date" id="calendar">
+						<p>Дата оформления вклада</p>
+					</div>
 					
+					<div class = "range">
+						<input type="range" value="999000" max="2999000" id="range1" onchange="change_input('deposit', 'range1')"/>
+						<br>
+						<p class="rangeP">3 000 000</p>
+						<p class="rangeP" style = "float:left; margin-left:9pt">1 тыс. руб.</p>
+					</div>
+					
+					<div>
+						<input class="fields" type="number" name="deposit" value="1000000" min = "1000" max="3000000" onchange="change_slider('deposit', 'range1')">
+						<p>Сумма вклада</p>
+					</div>
+					
+					<div>
+						<select class="fields" name="year">
+							<option value = 1>1 год</option>
+							<option value = 2>2 года</option>
+							<option value = 3>3 года</option>
+							<option value = 4>4 года</option>
+							<option value = 5>5 лет</option>
+						</select>
+						<p>Срок вклада</p>
+						
+					</div>
+					
+					<div>
+						<label for="radio2" class="radio">Да</label>
+						<input type="radio" id="radio2" name="radio">
+						<label for="radio1" class="radio">Нет</label>
+						<input type="radio" id="radio1" name="radio" checked>
+						<p style = "padding-right:6pt;">Пополнение вклада</p>
+					</div>
+					
+					<div class = "range">
+						<input type="range" value="999000" max="2999000" id="range2" onchange="change_input('depositAdd', 'range2')"/>
+						<br>
+						<p class="rangeP">3 000 000</p>
+						<p class="rangeP" style = "float:left; margin-left:9pt">1 тыс. руб.</p>
+					</div>
+					<div>
+						<input class="fields" type="number" name="depositAdd" value="1000000" min = "1000" max="3000000" onchange="change_slider('depositAdd', 'range2')">
+						<p>Сумма пополнения вклада</p>
+					</div>
 				</div>
-				
-				<div>
-					<label for="radio2" class="radio">Да</label>
-					<input type="radio" id="radio2" name="radio">
-					<label for="radio1" class="radio">Нет</label>
-					<input type="radio" id="radio1" name="radio" checked>
-					<p style = "padding-right:6pt;">Пополнение вклада</p>
-				</div>
-				
-				<div class = "range">
-					<input type="range" value="999000" max="2999000" id="range2" onchange="change_input('depositAdd', 'range2')"/>
-					<br>
-					<p class="rangeP">3 000 000</p>
-					<p class="rangeP" style = "float:left; margin-left:9pt">1 тыс. руб.</p>
-				</div>
-				<div>
-					<input class="fields" type="number" name="depositAdd" value="1000000" min = "1000" max="3000000" onchange="change_slider('depositAdd', 'range2')">
-					<p>Сумма пополнения вклада</p>
+				<br>
+				<br>
+				<div style="width:100%;">
+					<a class="button" onclick="calc()" style="float:left;">Рассчитать</a><p style="color:#336600;font-weight: bold; float:left; margin-left:20pt;">Результат: <span id="result"></p>
 				</div>
 			</div>
-			<br>
-			<br>
-			<div style="width:100%;">
-				<a class="button" onclick="calc()" style="float:left;">Рассчитать</a><p style="color:#336600;font-weight: bold; float:left; margin-left:20pt;">Результат: <span id="result"></p>
+			
+			<!--Футер -->
+			<div id="footer">
+				<a href="#">Кредитные карты</a> <a href="#">Вклады</a> <a href="#">Дебетовые карты</a> <a href="#">Страхование</a> <a href="#">Друзья</a> <a href="#">Интернет банк</a>
 			</div>
-		</div>
-		
-		<!--Футер -->
-		<div id="footer">
-			<a href="#">Кредитные карты</a> <a href="#">Вклады</a> <a href="#">Дебетовые карты</a> <a href="#">Страхование</a> <a href="#">Друзья</a> <a href="#">Интернет банк</a>
 		</div>
 	</div>
 </body>
