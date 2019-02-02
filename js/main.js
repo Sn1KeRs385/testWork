@@ -16,11 +16,11 @@ function change_input(inputName, sliderName)
 }
 function calc()
 {
-	if(document.getElementById('calendar').value==null)
+	/*if(document.getElementById('calendar').value==null)
 	{
 		alert("Введите дату!");
 		return 0;
-	}
+	}*/
 	var check_depositAdd = 0;
 	if(document.getElementsByName('radio')[0].checked)
 		check_depositAdd = 1;
