@@ -8,6 +8,7 @@ text-align: center;
 	min-height: 100vh;
 	margin:0 auto;
 	#border:solid;
+	text-align: left;
 }
 #header{
 	max-width:100%;
