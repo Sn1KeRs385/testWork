@@ -27,7 +27,7 @@ function calc()
 	//alert(document.getElementsByName('depositAdd')[0].value);
 	$.ajax({
 			type: "POST",
-			url: "calc.php/",
+			url: "calc.php",
 			data: {
 				date: document.getElementById('calendar').value,
 				deposit: document.getElementsByName('deposit')[0].value,
