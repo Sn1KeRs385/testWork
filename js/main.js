@@ -16,7 +16,7 @@ function change_input(inputName, sliderName)
 }
 function calc()
 {
-	if(document.getElementById('calendar'))
+	if(document.getElementById('calendar').value==null)
 	{
 		alert("Введите дату!");
 		return 0;
